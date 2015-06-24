@@ -1,4 +1,4 @@
-package com.tutorial.spring.bean;
+package com.tutorial.spring.bean_di;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -6,7 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class MainClass {
 
 	public static void main(String[] args) {
-		ApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");
+		ApplicationContext context = new ClassPathXmlApplicationContext("bean_di.xml");
 		Student student = (Student)context.getBean("Student");
 		System.out.println("Student Name: "+student.getStudentName());
 		System.out.println("Branch Name: "+student.getBranchName());

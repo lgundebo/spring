@@ -1,4 +1,4 @@
-package com.tutorial.spring.bean;
+package com.tutorial.spring.bean_di;
 
 public abstract class Branch {
 	private int branchCode;

@@ -1,4 +1,4 @@
-package com.tutorial.spring.bean;
+package com.tutorial.spring.bean_di;
 
 import java.util.List;
 import java.util.Map;
