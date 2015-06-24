@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+  
+   <!-- Dependency Injection by setters and creating an abstract instance --> 
+   	<bean id="Branch" class="com.tutorial.spring.bean.Branch" abstract="true">
+    	<property name="branchCode" value="1" />
+    	<property name="branchName" value="Electronics and Communications"/>
+    </bean>
+	
+	<!-- Dependency Injection 
+		by Constructor method with index and type,
+		with Map collection,
+	  	Bean reference and using inheritance -->
+	<bean id="Student" class="com.tutorial.spring.bean.Student" parent="Branch">
+		<constructor-arg  index="0" value="Lakshman Gundeboina"/>
+		<constructor-arg  type="java.lang.String"  value="012B0405"></constructor-arg>
+		<constructor-arg type="java.util.Map">
+			<map>
+				<entry key="Mathematics" value-ref="Faculty"></entry>
+			</map>
+		</constructor-arg>
+	</bean> 
+	
+	<!-- Dependency Injection 
+		by Constructor method,
+		with List collection -->
+	<bean id="Faculty" class="com.tutorial.spring.bean.Faculty" parent="Branch">
+		<constructor-arg  index="0" value="MathFac"/>
+		<constructor-arg  type="java.lang.String"  value="FAC401"></constructor-arg>
+		<constructor-arg type="java.util.List">			
+			<list>
+				<value>MatheMatics</value>
+				<value>Electornics</value>
+				<value>Drawing</value>
+			</list>
+		</constructor-arg>	
+	</bean>   
+	 
+</beans>  
