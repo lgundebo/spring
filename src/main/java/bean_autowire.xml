@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+  
+  <bean id="makrList" class="com.tutorial.spring.bean_autowire.MarkList">
+  	<property name="subject" value="Electronics"/> 
+  	<property name="marks" value="70"/> 	
+  </bean>
+  
+  <bean id="Student" class="com.tutorial.spring.bean_autowire.Student" autowire="byName">
+  	<property name="studentName" value="Lakshman Gundeboina"/>  	
+  </bean>
+
+  <!-- If we are not using the autowire, the actual bean defination should be;
+  <bean id="Student" class="com.tutorial.spring.bean_autowire.Student">
+  	<property name="studentName" value="Lakshman Gundeboina"/>
+  	<property name="makrList" ref="makrList"/>
+  </bean>
+ 
+ 	For auto wiring to work, bean id should be same as the property name in calling object(bean).
+    -->
+   
+</beans>  
