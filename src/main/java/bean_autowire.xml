@@ -13,7 +13,7 @@
   	<property name="studentName" value="Lakshman Gundeboina"/>  	
   </bean>
 
-  <!-- If we are not using the autowire, the actual bean defination should be;
+  <!-- If we are not using the autowire, the actual bean definition would be;
   <bean id="Student" class="com.tutorial.spring.bean_autowire.Student">
   	<property name="studentName" value="Lakshman Gundeboina"/>
   	<property name="makrList" ref="makrList"/>
